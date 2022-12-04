@@ -1,0 +1,46 @@
+﻿<Window x:Class="ADO.NET_HW1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ADO.NET_HW1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition  />
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <DataGrid Grid.Column="0" Name ="dgMain" GridLinesVisibility="None"/>
+        <Border Grid.Column="1" Margin="5,0,0,0">
+            <Grid Margin="180,0,0,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.5*"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <StackPanel HorizontalAlignment="Right">
+                    <TextBlock Text="Id" TextAlignment="Right" Margin="0 10 5 10"/>
+                    <TextBlock Text="Name" TextAlignment="Right" Margin="0 10 5 10"/>
+                    <TextBlock Text="Type" TextAlignment="Right" Margin="0 10 5 10"/>
+                    <TextBlock Text="Color" TextAlignment="Right" Margin="0 10 5 10"/>
+                    <TextBlock Text="Calories" TextAlignment="Right" Margin="0 10 5 10"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1">
+                    <TextBox Name="tbId" Margin="0 10 20 10"/>
+                    <TextBox Name="tbName" Margin="0 10 20 10"/>
+                    <TextBox Name="tbType" Margin="0 8 20 10"/>
+                    <TextBox Name="tbColor" Margin="0 8 20 10"/>
+                    <TextBox Name="tbCalories" Margin="0 8 20 10"/>
+                </StackPanel>
+                <Button Grid.Row="1" Grid.Column="1" VerticalAlignment="Top" Margin="10" Content="Add" Click="Add_click"/>
+                <Button Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" Margin="10 0 10 90" Content="Max Calories" Click="Click_Max"/>
+                <Button Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" Margin="10 0 10 10" Content="Min Calories" Click="Click_Min"/>
+                <Button Grid.Row="1" Grid.Column="1" VerticalAlignment="Bottom" Margin="10 0 10 64" Content="Avg Calories" Click="Click_Avg"/>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>
